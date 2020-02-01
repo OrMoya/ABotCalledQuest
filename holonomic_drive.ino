@@ -39,7 +39,6 @@ void setup()
 AMFS.begin(); 
 pinMode(x_pin, INPUT); //set arduino pin as input
 pinMode(y_pin, INPUT);
-pinMode(ch3_pin, INPUT);
 
 Serial.begin(9600); // Pour a bowl of Serial
 }
@@ -120,10 +119,10 @@ double vector_dir (double y, double x)
   return result;
 }
 
-double motor_degree(double set_angle, double vector_angle) //set angle is the angle of a wheel axis from a top down view
+double motor_angle(double set_angle, double vector_angle) //set angle is the angle of a wheel axis from a top down view
 {
   double result;
-  result = set_angle - vector angle;
+  result = set_angle - vector_angle;
   return result;
 }
 
